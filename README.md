@@ -6,7 +6,10 @@ A blockchain-based supply chain management system could provide transparency and
 Contributors-
 
 - Amaku David
-- Adejorin Abel - [x]
+- Adejorin Abel
 - Akomolafe Seun
 - Adebimpe Islamiyyah 
 - Iwuji George
+
+
+- [x] Adejorin Abel 🎉
