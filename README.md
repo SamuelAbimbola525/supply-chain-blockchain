@@ -8,7 +8,7 @@ Contributors-
 - Amaku David
 - Adejorin Abel
 - Akomolafe Seun
-- Adebimpe Islamiyyah 
+- Islamiyyah Adebimpe Adefila
 - Iwuji George
 
 
