@@ -15,7 +15,7 @@ A blockchain-based supply chain management system could provide transparency and
 
 ### Project Details-
 A supply chain Dapp, built with React and Tailwind with smartcontract(s) deployed on Polygon chain, handled by Yarn package manager
-Smartcontract, securely and gas-consciously written in Vyper and developed in Brownie
+Smartcontract(s), securely and gas-consciously written in Vyper and developed in Brownie
 ### Technologies Used-
 [ ] Yarn package manager
 [ ] React Frontend Framework
