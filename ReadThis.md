@@ -15,14 +15,17 @@ A blockchain-based supply chain management system could provide transparency and
 
 ### Project Details-
 A supply chain Dapp, built with React and Tailwind with smartcontract(s) deployed on Polygon chain, handled by Yarn package manager
-Smartcontract(s), securely and gas-consciously written in Vyper and developed in Brownie
+Smartcontract(s), securely and gas-consciously written in Vyper and developed in Apeworx
 ### Technologies Used-
 [ ] Yarn package manager
 [ ] React Frontend Framework
 [ ] Tailwind CSS
 [ ] Polygon Blockchain (EVM)
-[ ] Brownie
+[ ] Ape
 [ ] Vyper
+[ ] NodeJs
+[ ] Express
+
 
 project-root/
 │
@@ -52,7 +55,7 @@ project-root/
     ├── tests/
     ├── scripts/
     ├── config/
-    └── brownie-config.yaml
+    └── ape-config.yaml
 
 chocolate_brownie: This folder contains the React frontend application. Key subdirectories include:
 
@@ -68,10 +71,10 @@ chocolate_factory: This folder contains the Node.js/Express backend server. Key 
     services: Business logic and services that interact with the blockchain, database, or other external systems.
     config: Configuration files for the backend server, such as settings for connecting to the blockchain or a database.
 
-sweet_cream: This folder contains the Vyper smart contracts and Brownie development environment. Key subdirectories include:
+sweet_cream: This folder contains the Vyper smart contracts and Ape development environment. Key subdirectories include:
 
     contracts: Vyper smart contracts, organized by functionality (e.g., product, payment, logistics, etc.).
-    tests: Brownie test scripts for the smart contracts.
+    tests: Ape test scripts for the smart contracts.
     scripts: Deployment and interaction scripts for the smart contracts.
     config: Configuration files for the smart contract development environment, such as settings for connecting to the Polygon testnet.
 

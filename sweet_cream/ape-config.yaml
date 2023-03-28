@@ -1,0 +1,17 @@
+name: sour_cream
+
+plugins: 
+  - name: polygon
+  - name: vyper
+
+contracts_folder: contracts
+deployments:
+  ethereum:
+    goerli:
+      - contract_type: Token
+      #   address: "0xc0A9e2A18D000eDAf033415565Ee77864a908967"
+      - contract_type: Product
+      #   address: "0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625"
+      - contract_type: Payment
+      #   address: "0x779877A7B0D9E8603169DdbD7836e478b4624789"
+default_ecosystem: ethereum
