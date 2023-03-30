@@ -118,6 +118,12 @@ def add_item(_name: String[100], _description: String[256], _price: uint256, _ma
 
 
 # Transfer item ownership
+
+
+@external
+def external_transfer_ownership(_itemId: uint256, _newOwnerId: uint256):
+    self.transfer_ownership(_itemId, _newOwnerId)
+
 @internal
 def transfer_ownership(_itemId: uint256, _newOwnerId: uint256):
     # Ensure the item exists
@@ -129,16 +135,18 @@ def transfer_ownership(_itemId: uint256, _newOwnerId: uint256):
     # Ensure the new owner is registered
     assert self.is_registered(_newOwnerId)
     
+    _oldOwnerId: uint256 = self.items[_itemId].ownerId
+
     # Update the item's owner
     self.items[_itemId].ownerId = _newOwnerId
     
     # Record the ownership transfer
     self.transferCounter += 1
-    newTransfer: OwnershipTransfer = OwnershipTransfer({itemId: _itemId, fromId: self.items[_itemId].ownerId, toId: _newOwnerId, transferTime: block.timestamp})
+    newTransfer: OwnershipTransfer = OwnershipTransfer({itemId: _itemId, fromId: _oldOwnerId, toId: _newOwnerId, transferTime: block.timestamp})
     self.transfers[self.transferCounter] = newTransfer
     
     # Emit the OwnershipTransferred event
-    log OwnershipTransferred(_itemId, self.items[_itemId].ownerId, _newOwnerId, block.timestamp)
+    log OwnershipTransferred(_itemId, _oldOwnerId, _newOwnerId, block.timestamp)
 
 
 # Purchase an item
@@ -168,6 +176,15 @@ def purchase_item(_itemId: uint256, _customerId: uint256):
     # Transfer ownership of the item to the customer
     self.transfer_ownership(_itemId, _customerId)
 
+@external
+@view
+def get_participant(_participantId: uint256) -> Participant:
+    return self.participants[_participantId]
+
+@external
+@view
+def get_item(_itemId: uint256) -> Item:
+    return self.items[_itemId]
 
 # Check if a participant is registered
 @internal

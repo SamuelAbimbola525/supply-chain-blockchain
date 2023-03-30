@@ -3,3 +3,7 @@ compiler:
     version: null
   vyper:
     version: 0.3.7
+
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
